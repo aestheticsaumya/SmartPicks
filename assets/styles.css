@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    /* margin-left: auto; Removed this */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        left: 10px; /* Changed this to left: 10px; */
+        top: 20px; /* Added to align with header padding */
+        /* margin-left: auto; Removed this */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 50%;
+        width: 50%;
+        background: white;
+        box-shadow: 0 4px 6px gray;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .logo {
+        position: static; /* removed relative and auto/transform */
+        margin: 0 auto; /* centered logo */
+    }
+
+    .hero, .about {
+        flex-direction: column;
+    }
+
+    .slider-image {
+        width: 90%;
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 0;
+}
+
+/* Image Slider */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider-image {
+    width: 100%;
+    width: 500px;
+    height: 500px;
+}
+
+/* Arrow Navigation */
+.prev-arrow, .next-arrow {
+    position: absolute;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.prev-arrow { left: 10px; }
+.next-arrow { right: 10px; }
+
+/* Hero Text */
+.hero-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.shop-btn {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px;
+    padding-top: 0;
+}
+
+.about-text {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.about h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* About Images */
+.about-image-left, .about-image-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image-left img, .about-image-right img {
+    width: 100%;
+    width: 300px;
+    height: 400px;
+}

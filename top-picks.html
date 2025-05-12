@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPicks - Reviews</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            /* margin-left: auto; Removed this */
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                left: 10px;
+                /* Changed this to left: 10px; */
+                top: 20px;
+                /* Added to align with header padding */
+                /* margin-left: auto; Removed this */
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 50%;
+                width: 50%;
+                background: white;
+                box-shadow: 0 4px 6px gray;
+                padding: 10px;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+
+            .nav-links a {
+                padding: 10px;
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .logo {
+                position: static;
+                /* removed relative and auto/transform */
+                margin: 0 auto;
+                /* centered logo */
+            }
+
+            .hero,
+            .about {
+                flex-direction: column;
+            }
+
+            .slider-image {
+                width: 90%;
+            }
+        }
+
+        .top-picks {
+            padding: 30px;
+        }
+
+        .top-picks h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .phone-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .phone-item {
+            width: 300px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        .phone-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .phone-item h2 {
+            font-size: 24px;
+            margin: 10px 0;
+            text-decoration: underline;
+        }
+
+        .phone-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .phone-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .phone-item img {
+            width: 100%;
+            width: 300px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">SmartPicks</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="top-picks.html">Top Picks</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
+
+    <!-- Top Picks Section -->
+    <section class="top-picks">
+        <h1>Top Picks of 2025 Smartphones</h1>
+        <p>The best smartphones of 2025 across different categories.</p>
+
+        <div class="phone-list">
+            <div class="phone-item">
+                <h2>Power Users & Creators</h2>
+                <img src="./assets/images/samsung-s25-ultra.jpg" alt="Samsung Galaxy S25 Ultra">
+                <h3>Best Overall Flagship – Samsung Galaxy S25 Ultra</h2>
+                <p><strong>Processor:</strong> Snapdragon 8 Gen 4</p>
+                <p><strong>Display:</strong> 6.8" Dynamic AMOLED 2X, 120Hz</p>
+                <p><strong>Camera:</strong> 200MP + 50MP + 12MP + 10MP</p>
+                <p><strong>Battery:</strong> 5500mAh, 65W Fast Charging</p>
+                <p><strong>Price:</strong> ₹1,29,999</p>
+            </div>
+
+            <div class="phone-item">
+                <h2>Balanced Value & Performance</h2>
+                <img src="./assets/images/oneplus-12r.jpg" alt="OnePlus 12R">
+                <h3>Best Value for Money – OnePlus 12R</h2>
+                <p><strong>Processor:</strong> Snapdragon 8 Gen 3</p>
+                <p><strong>Display:</strong> 6.7" LTPO AMOLED, 1-120Hz</p>
+                <p><strong>Camera:</strong> 50MP Sony IMX890 + 8MP + 2MP</p>
+                <p><strong>Battery:</strong> 5500mAh, 100W SuperVOOC Charging</p>
+                <p><strong>Price:</strong> ₹44,999</p>
+            </div>
+
+            <div class="phone-item">
+                <h2>Budget-Conscious</h2>
+                <img src="./assets/images/redmi-note-14-pro.jpg" alt="Redmi Note 14 Pro Plus 5G">
+                <h3>Best Budget Phone – Redmi Note 14 Pro Plus 5G</h2>
+                <p><strong>Processor:</strong> MediaTek Dimensity 9200+</p>
+                <p><strong>Display:</strong> 6.67" AMOLED, 120Hz</p>
+                <p><strong>Camera:</strong> 200MP OIS + 8MP + 2MP</p>
+                <p><strong>Battery:</strong> 5100mAh, 67W Fast Charging</p>
+                <p><strong>Price:</strong> ₹28,999</p>
+            </div>
+
+            <div class="phone-item">
+                <h2>Photography Lovers</h2>
+                <img src="./assets/images/pixel-9-pro.jpg" alt="Google Pixel 9 Pro">
+                <h3>Best Camera Phone – Google Pixel 9 Pro</h2>
+                <p><strong>Processor:</strong> Google Tensor G4 AI Chip</p>
+                <p><strong>Display:</strong> 6.7" OLED, 120Hz</p>
+                <p><strong>Camera:</strong> 50MP Main + 48MP Telephoto + 48MP Ultra-wide</p>
+                <p><strong>Battery:</strong> 5000mAh, 33W Fast Charging</p>
+                <p><strong>Price:</strong> ₹89,999</p>
+            </div>
+
+            <div class="phone-item">
+                <h2>Gamers</h2>
+                <img src="./assets/images/rog-phone-8.jpg" alt="ASUS ROG Phone 8 Ultimate">
+                <h3>Best Gaming Phone – ASUS ROG Phone 8 Ultimate</h2>
+                <p><strong>Processor:</strong> Snapdragon 8 Gen 4</p>
+                <p><strong>Display:</strong> 6.78" AMOLED, 165Hz</p>
+                <p><strong>Cooling:</strong> Active AeroCooling System</p>
+                <p><strong>Battery:</strong> 6000mAh, 65W Fast Charging</p>
+                <p><strong>Price:</strong> ₹79,999</p>
+            </div>
+
+            <div class="phone-item">
+                <h2>Foldable Fans</h2>
+                <img src="./assets/images/galaxy-z-fold-6.jpg" alt="Samsung Galaxy Z Fold 6">
+                <h3>Best Foldable Phone – Samsung Galaxy Z Fold 6</h2>
+                <p><strong>Processor:</strong> Snapdragon 8 Gen 4</p>
+                <p><strong>Display:</strong> 7.6" Inner AMOLED, 120Hz + 6.3" Cover Display</p>
+                <p><strong>Camera:</strong> 50MP + 12MP + 10MP</p>
+                <p><strong>Battery:</strong> 4700mAh, 45W Fast Charging</p>
+                <p><strong>Price:</strong> ₹1,59,999</p>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

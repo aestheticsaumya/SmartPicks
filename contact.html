@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPicks - Contact</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin: 0 10px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Contact Section */
+        .content {
+            text-align: center;
+            padding: 50px 20px;
+            background: white;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            font-size: 28px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                left: 10px; /* Changed this to left: 10px; */
+                top: 20px; /* Added to align with header padding */
+                /* margin-left: auto; Removed this */
+            }
+        
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 50%;
+                width: 50%;
+                background: white;
+                box-shadow: 0 4px 6px grey;
+                padding: 10px;
+                z-index: 1000;
+            }
+        
+            .nav-links.active {
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+        
+            .nav-links a {
+                padding: 10px;
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+            }
+        
+            .logo {
+                position: static; /* removed relative and auto/transform */
+                margin: 0 auto; /* centered logo */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SmartPicks</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="top-picks.html">Top Picks</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
+
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p><strong>Email:</strong> support@smartpicks.com </p>
+        <p><strong>Phone:</strong> +91 9876543210 </p>
+    </div>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
